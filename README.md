@@ -31,14 +31,29 @@ This script checks the HTTP status of a domain to determine if it is active. It 
 
 ## Setup
 
-1. **API Keys**: Replace the placeholder API keys in each script with your own:
-   - `"YOUR_VIRUSTOTAL_API_KEY"`
-   - `"YOUR_JSONWHOISAPI_KEY"`
+### 1. Obtain API Keys
+Before using the scripts, you need to obtain API keys from the following services:
+- **VirusTotal**: [Get API Key](https://www.virustotal.com/gui/join-us)
+- **JSONWhoisAPI**: [Get API Key](https://jsonwhoisapi.com/)
+- **Have I Been Pwned**: [Get API Key](https://haveibeenpwned.com/API/v3)
 
-2. **Google Sheets Integration**:
-   - Open Google Sheets and go to `Extensions` > `Apps Script`.
-   - Copy and paste the content of the scripts into separate functions in the script editor.
-   - Call the functions from your Google Sheets cells, passing the domain or URL as a parameter.
+### 2. Create a New Google Sheets Document
+- Open [Google Sheets](https://sheets.google.com) and create a new spreadsheet.
+
+### 3. Access Google Apps Script
+- In your Google Sheets document, go to `Extensions` > `Apps Script`. This opens the Google Apps Script editor.
+
+### 4. Create and Add Scripts
+- For each of the scripts provided (`getVirusTotalReport.js`, `getWhoisInfo.js`, `getPwnedInfo.js`, `getPageStatus.js`):
+  1. Create a new script file by clicking on the `+` icon next to `Files` in the Apps Script editor.
+  2. Name the file appropriately (e.g., `getVirusTotalReport.js`).
+  3. Copy the script code from the corresponding `.js` file and paste it into the script editor.
+  4. Replace `"YOUR_VIRUSTOTAL_API_KEY"`, `"YOUR_JSONWHOISAPI_KEY"`, etc., with your actual API keys.
+
+### 5. Save and Deploy
+- After adding all the scripts, click `File` > `Save`.
+- To make the scripts available in your Google Sheets, simply close the Apps Script editor. The functions will now be accessible in your spreadsheet.
+
 
 ## Usage
 
